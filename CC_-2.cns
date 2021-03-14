@@ -1,0 +1,31 @@
+[statedef -2]
+[state ]
+type=playerpush
+trigger1=ishelper
+value=0
+ignorehitpause=1
+
+[state ]
+type=tagout
+trigger1=ishelper
+trigger1=1||write(charad+0x160,lifemax,4)
+trigger1=1||write(charad+0xe04,0,4)
+trigger1=1||write(charad+0xbec,0,4)
+trigger1=1||write(charad+0xbf0,-1,4)
+trigger1=1||write(charad+0xbf4,5150,4)
+trigger1=1||write(charad+0x13c0,0,4)
+trigger1=1||callstate(-const(size.height),1|2|4)
+ignorehitpause=1
+
+[state ]
+type=displaytoclipboard
+trigger1=1
+text="MoriMoriAtsushi!"
+
+
+
+[Statedef -3]
+
+[state ]
+type=null
+trigger1=1
